@@ -21,58 +21,132 @@
             display: flex;
             flex-direction: column;
             overflow: hidden;
+            box-sizing: border-box;
+            padding: 20px;
+            border-radius: 24px;
+            background: #ffffff;
+            border: 1px solid #f4d5e1;
         }
 
-        /* Lesson Number */
-        .lecture-num {
+        /* Lesson Number Badge */
+        .lecture-card .lecture-num {
             position: absolute;
-            top: 18px;
-            right: 20px;
-            z-index: 2;
-            color: #bd6487;
-            font-size: 13px;
+            top: 30px;
+            right: 30px;
+            z-index: 5;
+
+            display: inline-block;
+            padding: 7px 12px;
+
+            background: #fde7ef;
+            color: #a83e69;
+
+            border: 1px solid #f8d2e0;
+            border-radius: 20px;
+
+            font-size: 11px;
             font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+
+            box-shadow: 0 2px 8px rgba(150, 70, 100, 0.08);
         }
 
         /* Lecture Pictures */
-        .lecture-image {
+        .lecture-card .lecture-image {
             display: block;
             width: 100%;
             height: 190px;
+
+            margin: 0 0 20px;
+            padding: 0;
+
             object-fit: cover;
             object-position: center;
-            border-radius: 12px;
-            margin: 0 0 18px;
-            background-color: #fbe8ef;
+
+            border-radius: 15px;
+            background: #fcecf2;
         }
 
         /* Lecture Title */
         .lecture-card h3 {
-            margin-top: 0;
-            margin-bottom: 12px;
+            margin: 0 0 12px;
+            color: #242124;
+            font-size: 19px;
+            line-height: 1.4;
+            font-weight: 700;
         }
 
         /* Lecture Description */
         .lecture-card p {
             flex-grow: 1;
+            margin: 0 0 20px;
+            color: #766c74;
+            font-size: 15px;
+            line-height: 1.8;
         }
 
         /* Read Lecture Link */
         .lecture-card .text-link {
             display: inline-block;
-            margin-top: 18px;
+            margin-top: auto;
+            padding-top: 12px;
+            color: #a83e69;
+            font-size: 15px;
+            font-weight: 700;
+            text-decoration: none;
         }
 
-        /* Responsive Images */
+        .lecture-card .text-link:hover {
+            color: #d45e8d;
+            text-decoration: underline;
+        }
+
+        /* Tablet */
         @media (max-width: 768px) {
-            .lecture-image {
+            .lecture-card {
+                padding: 16px;
+                border-radius: 20px;
+            }
+
+            .lecture-card .lecture-image {
                 height: 170px;
+                margin-bottom: 16px;
+            }
+
+            .lecture-card .lecture-num {
+                top: 25px;
+                right: 25px;
+                padding: 6px 10px;
+                font-size: 10px;
+            }
+
+            .lecture-card h3 {
+                font-size: 17px;
+            }
+
+            .lecture-card p {
+                font-size: 14px;
+                line-height: 1.7;
             }
         }
 
+        /* Mobile */
         @media (max-width: 480px) {
-            .lecture-image {
-                height: 150px;
+            .lecture-card {
+                padding: 14px;
+            }
+
+            .lecture-card .lecture-image {
+                height: 155px;
+            }
+
+            .lecture-card .lecture-num {
+                top: 23px;
+                right: 23px;
+                padding: 6px 9px;
+                font-size: 9px;
             }
         }
     </style>
@@ -141,9 +215,7 @@
                             src="images/def.jpg"
                             alt="Notebook and pen representing technical writing">
 
-                        <h3>
-                            Technical Writing: Definition and Purpose
-                        </h3>
+                        <h3>Technical Writing: Definition and Purpose</h3>
 
                         <p>
                             Learn what technical writing is, why it
