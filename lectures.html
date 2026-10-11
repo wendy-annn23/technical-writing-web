@@ -1,1 +1,334 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="A student-friendly Technical Writing learning website."><title>Lectures | Technical Writing</title><link rel="stylesheet" href="style.css"><script src="script.js" defer></script></head><body><header class="site-header"><div class="container nav-wrap"><a class="brand" href="index.html"><img src="images/logo.png" alt="Technical Writing logo"><span>Technical Writing</span></a><button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button><nav class="main-nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="lectures.html">Lectures</a><a href="about.html">About Us</a><a href="contact.html">Contact Info</a></nav></div></header><main><section class="page-banner"><div class="container"><p class="eyebrow">THE LEARNING LIBRARY</p><h1 class="page-title">Explore the Lectures</h1><p>Seven core topics to help you understand technical writing, organize information, and communicate with purpose.</p></div></section><section class="section"><div class="container"><div class="grid"><article class="card lecture-card"><span class="lecture-num">LESSON 01</span><div class="card-icon">✎</div><h3>Technical Writing: Definition and Purpose</h3><p>Learn what technical writing is, why it matters, and how it helps readers complete tasks or understand information.</p><a class="text-link" href="technical-writing.html">Read this lecture →</a></article><article class="card lecture-card"><span class="lecture-num">LESSON 02</span><div class="card-icon">ABC</div><h3>ABC’s of Technical Writing</h3><p>Practice the core principles of accuracy, brevity, and clarity for useful, reader-friendly documents.</p><a class="text-link" href="abcs-technical-writing.html">Read this lecture →</a></article><article class="card lecture-card"><span class="lecture-num">LESSON 03</span><div class="card-icon">☷</div><h3>Outlining the Subject</h3><p>Plan a document before drafting by arranging main ideas, supporting points, and details in a logical order.</p><a class="text-link" href="outlining-subject.html">Read this lecture →</a></article><article class="card lecture-card"><span class="lecture-num">LESSON 04</span><div class="card-icon">▤</div><h3>Types of Technical Paper</h3><p>Explore common technical documents, including reports, proposals, manuals, instructions, and research papers.</p><a class="text-link" href="types-technical-paper.html">Read this lecture →</a></article><article class="card lecture-card"><span class="lecture-num">LESSON 05</span><div class="card-icon">Aa</div><h3>The Basic English Structure</h3><p>Review sentence parts, common sentence patterns, and grammar choices that make writing easier to follow.</p><a class="text-link" href="basic-english-structure.html">Read this lecture →</a></article><article class="card lecture-card"><span class="lecture-num">LESSON 06</span><div class="card-icon">✉</div><h3>Parts of a Letter</h3><p>Identify the standard parts of a formal letter and understand the purpose of each section.</p><a class="text-link" href="parts-of-a-letter.html">Read this lecture →</a></article><article class="card lecture-card"><span class="lecture-num">LESSON 07</span><div class="card-icon">▥</div><h3>Graphs / Charts</h3><p>Learn how visual data displays communicate comparisons, change over time, and proportions.</p><a class="text-link" href="graphs-charts.html">Read this lecture →</a></article></div></div></section></main><footer class="site-footer"><div class="container footer-inner"><a class="footer-brand" href="index.html"><img src="images/logo.png" alt=""><span>Technical Writing</span></a><p>Learn clearly. Write confidently. ✿</p></div></footer></body></html>
+```html
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description"
+        content="A student-friendly Technical Writing learning website.">
+
+    <title>Lectures | Technical Writing</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+    <style>
+        /* Lecture Cards */
+        .lecture-card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        /* Lesson Number */
+        .lecture-num {
+            position: absolute;
+            top: 18px;
+            right: 20px;
+            z-index: 2;
+            color: #bd6487;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        /* Lecture Pictures */
+        .lecture-image {
+            display: block;
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 12px;
+            margin: 0 0 18px;
+            background-color: #fbe8ef;
+        }
+
+        /* Lecture Title */
+        .lecture-card h3 {
+            margin-top: 0;
+            margin-bottom: 12px;
+        }
+
+        /* Lecture Description */
+        .lecture-card p {
+            flex-grow: 1;
+        }
+
+        /* Read Lecture Link */
+        .lecture-card .text-link {
+            display: inline-block;
+            margin-top: 18px;
+        }
+
+        /* Responsive Images */
+        @media (max-width: 768px) {
+            .lecture-image {
+                height: 170px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .lecture-image {
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="site-header">
+        <div class="container nav-wrap">
+
+            <a class="brand" href="index.html">
+                <img src="images/logo.png" alt="Technical Writing logo">
+                <span>Technical Writing</span>
+            </a>
+
+            <button class="menu-toggle"
+                aria-label="Toggle navigation"
+                aria-expanded="false">
+                ☰
+            </button>
+
+            <nav class="main-nav" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="lectures.html" aria-current="page">Lectures</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact Info</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <!-- PAGE BANNER -->
+        <section class="page-banner">
+            <div class="container">
+
+                <p class="eyebrow">THE LEARNING LIBRARY</p>
+
+                <h1 class="page-title">Explore the Lectures</h1>
+
+                <p>
+                    Seven core topics to help you understand technical
+                    writing, organize information, and communicate
+                    with purpose.
+                </p>
+
+            </div>
+        </section>
+
+        <!-- LECTURE CARDS -->
+        <section class="section">
+            <div class="container">
+
+                <div class="grid">
+
+                    <!-- LESSON 01 -->
+                    <article class="card lecture-card">
+
+                        <span class="lecture-num">LESSON 01</span>
+
+                        <img
+                            class="lecture-image"
+                            src="images/def.jpg"
+                            alt="Notebook and pen representing technical writing">
+
+                        <h3>
+                            Technical Writing: Definition and Purpose
+                        </h3>
+
+                        <p>
+                            Learn what technical writing is, why it
+                            matters, and how it helps readers complete
+                            tasks or understand information.
+                        </p>
+
+                        <a class="text-link"
+                            href="technical-writing.html">
+                            Read this lecture →
+                        </a>
+
+                    </article>
+
+                    <!-- LESSON 02 -->
+                    <article class="card lecture-card">
+
+                        <span class="lecture-num">LESSON 02</span>
+
+                        <img
+                            class="lecture-image"
+                            src="images/abcs.jpg"
+                            alt="Alphabet and writing materials">
+
+                        <h3>ABC’s of Technical Writing</h3>
+
+                        <p>
+                            Practice the core principles of accuracy,
+                            brevity, and clarity for useful,
+                            reader-friendly documents.
+                        </p>
+
+                        <a class="text-link"
+                            href="abcs-technical-writing.html">
+                            Read this lecture →
+                        </a>
+
+                    </article>
+
+                    <!-- LESSON 03 -->
+                    <article class="card lecture-card">
+
+                        <span class="lecture-num">LESSON 03</span>
+
+                        <img
+                            class="lecture-image"
+                            src="images/outlining.jpg"
+                            alt="Organized notes and document outline">
+
+                        <h3>Outlining the Subject</h3>
+
+                        <p>
+                            Plan a document before drafting by arranging
+                            main ideas, supporting points, and details
+                            in a logical order.
+                        </p>
+
+                        <a class="text-link"
+                            href="outlining-subject.html">
+                            Read this lecture →
+                        </a>
+
+                    </article>
+
+                    <!-- LESSON 04 -->
+                    <article class="card lecture-card">
+
+                        <span class="lecture-num">LESSON 04</span>
+
+                        <img
+                            class="lecture-image"
+                            src="images/types.jpg"
+                            alt="Reports and technical documents">
+
+                        <h3>Types of Technical Paper</h3>
+
+                        <p>
+                            Explore common technical documents,
+                            including reports, proposals, manuals,
+                            instructions, and research papers.
+                        </p>
+
+                        <a class="text-link"
+                            href="types-technical-paper.html">
+                            Read this lecture →
+                        </a>
+
+                    </article>
+
+                    <!-- LESSON 05 -->
+                    <article class="card lecture-card">
+
+                        <span class="lecture-num">LESSON 05</span>
+
+                        <img
+                            class="lecture-image"
+                            src="images/basic.jpg"
+                            alt="English grammar and sentence structure study materials">
+
+                        <h3>The Basic English Structure</h3>
+
+                        <p>
+                            Review sentence parts, common sentence
+                            patterns, and grammar choices that make
+                            writing easier to follow.
+                        </p>
+
+                        <a class="text-link"
+                            href="basic-english-structure.html">
+                            Read this lecture →
+                        </a>
+
+                    </article>
+
+                    <!-- LESSON 06 -->
+                    <article class="card lecture-card">
+
+                        <span class="lecture-num">LESSON 06</span>
+
+                        <img
+                            class="lecture-image"
+                            src="images/parts.jpg"
+                            alt="Formal letter and envelope">
+
+                        <h3>Parts of a Letter</h3>
+
+                        <p>
+                            Identify the standard parts of a formal
+                            letter and understand the purpose of each
+                            section.
+                        </p>
+
+                        <a class="text-link"
+                            href="parts-of-a-letter.html">
+                            Read this lecture →
+                        </a>
+
+                    </article>
+
+                    <!-- LESSON 07 -->
+                    <article class="card lecture-card">
+
+                        <span class="lecture-num">LESSON 07</span>
+
+                        <img
+                            class="lecture-image"
+                            src="images/graphs.jpg"
+                            alt="Graphs and charts showing data">
+
+                        <h3>Graphs / Charts</h3>
+
+                        <p>
+                            Learn how visual data displays communicate
+                            comparisons, change over time, and
+                            proportions.
+                        </p>
+
+                        <a class="text-link"
+                            href="graphs-charts.html">
+                            Read this lecture →
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+
+            <a class="footer-brand" href="index.html">
+                <img src="images/logo.png" alt="">
+                <span>Technical Writing</span>
+            </a>
+
+            <p>Learn clearly. Write confidently. ✿</p>
+
+        </div>
+    </footer>
+
+</body>
+</html>
+```
